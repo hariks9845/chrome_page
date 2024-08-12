@@ -1,0 +1,62 @@
+
+.fast-content {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.fast-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.fast-content .highlight {
+  color: #34a853; /* Google's "Fast" green */
+}
+
+.slides-container {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  animation: slideInFromRight 0.7s ease-in-out forwards;
+}
+
+.slides-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.slide {
+  min-width: 300px;
+  margin: 0 15px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
